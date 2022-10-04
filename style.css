@@ -1,0 +1,87 @@
+html{
+    --navColor: rgb(1, 107, 100); 
+    --navLinkColor: rgb(250, 250, 250);
+    --navLinkPadding: 14px 16px;
+    --navTextSize: 17px;
+    --gridItemPadding: 30px;
+    --contentBg: rgb(5, 60, 133);
+    --footerBg: rgb(78, 0, 85);
+    --articleBg: rgb(114, 0, 74);
+    --contactBg: rgb(1, 116, 43);
+    --contactFont: 120%;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+nav {
+    grid-row: 1;
+    overflow: hidden;
+    background-color: var(--navColor);
+  }
+  
+nav a {
+    float: left;
+    color: var(--navLinkColor);
+    text-align: center;
+    padding: var(--navLinkPadding);
+    text-decoration: none;
+    font-size: var(--navTextSize);
+  }
+  
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#content{
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 60;
+    padding: var(--gridItemPadding);
+    background-color: var(--contentBg);
+}
+
+.contact{
+    grid-column: 6;
+    grid-row: 1 / span 70;
+    padding: var(--gridItemPadding);
+    background-color: var(--contactBg);
+}
+
+.contact p{
+    margin-left: auto;
+    margin-right: auto;
+    color: #ddd;
+    font-size: var(--contactFont);
+    width: 200px;
+}
+
+#article-content{
+    float: right;
+    width: 500px;
+}
+
+article{
+    width: 500px;
+    border: 3px black solid;
+    border-radius: 15px;
+    background-color: var(--articleBg);
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+
+footer{
+    grid-column: 1 / span 5;
+    grid-row: 60 / span 10;
+    color: white;
+    background-color: var(--footerBg);
+    padding: var(--gridItemPadding);
+}
+  
